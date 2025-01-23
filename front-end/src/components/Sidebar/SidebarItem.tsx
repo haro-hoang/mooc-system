@@ -8,7 +8,7 @@ const SidebarItem = ({ item, pageName, setPageName, currentRole }: any) => {
       pageName !== item.label.toLowerCase() ? item.label.toLowerCase() : "";
     return setPageName(updatedPageName);
   };
-
+  
   const hasAccess = item.roles.some((role: string) => currentRole.includes(role));
   if (!hasAccess) return null;
 
